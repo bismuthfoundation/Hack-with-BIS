@@ -201,13 +201,13 @@ print(file_get_contents($cache_file));
 You like this tutorial? Learn something? Give us a hand!  
 You can:
 
-- star this repo
-- post a link to that tutorial in a forum you use (no spam ever!) explaining what you liked/learn in it
-- tweet about it: [https://twitter.com/intent/tweet?text=A blockchain aware badge for any website, with #Bismuth and #PHP&amp;url=https://github.com/bismuthfoundation/Hack-with-BIS/tree/master/03-WebAPI-PHP-Badge&amp;via=Eggpoolnet](Tweet: "A blockchain aware badge for any website, with #Bismuth and #PHP")
+- Star this repo
+- Post a link to that tutorial in a forum you use (no spam ever!) explaining what you liked/learn in it
+- Tweet about it: [Tweet: "A blockchain aware badge for any website, with #Bismuth and #PHP"](https://twitter.com/intent/tweet?text=A blockchain aware badge for any website, with #Bismuth and #PHP&amp;url=https://github.com/bismuthfoundation/Hack-with-BIS/tree/master/03-WebAPI-PHP-Badge&amp;via=Eggpoolnet)
 
 ## Resources
 
-- Full code of this tuto: https://github.com/bismuthfoundation/Hack-with-BIS/tree/master/03-WebAPI-PHP-Badge/code
+- Full code and assets for this tuto: https://github.com/bismuthfoundation/Hack-with-BIS/tree/master/03-WebAPI-PHP-Badge/code
 
 - Detail of the available Bismuth http API commands: http://bismuth.online/apihelp
 - The explorers and API code: https://github.com/maccaspacca/BismuthToolsWeb
