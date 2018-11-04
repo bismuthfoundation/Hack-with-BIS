@@ -54,7 +54,7 @@ Let's just imagine we know how to create the image, and we just need the plumbin
 
 In php 101, this is the following:
 
-```
+```php
 $address = $_GET['address'];
 
 $cache_file = "./cache/$address.png";
@@ -68,6 +68,88 @@ if (!file_exists($cache_file)) {
 print(file_get_contents($cache_file));
 ```
 
+> time() returns the current unix timestamp, and filemtime() the timestamp of the last file modification. The difference (in seconds, then) is compared to 60 * 10, that is 10 minutes. This is to avoid hammering the API server, and your balance does not change that fast anyway.
+
+**Generate and save**
+
+Now, we miss a `generate_and_save` function, that takes a `$address` and the location of the `$cache_file` 
+
+Again, we'll split this task in several easy ones:
+- get the balance of the address
+- assemble the text to print
+- create the image from its parts
+- save it
+
+### Get the balance of an address
+
+The API doc tells us to query `http://bismuth.online/api/address/our_bismuth_address`.  
+Let fetch that in a browser to see what the result contains:
+http://bismuth.online/api/address/437b30a2ea780cffb67cc220428d462cf2bedcbd3aab094aa7d4df9c
+
+Result is 
+```
+{"address": "437b30a2ea780cffb67cc220428d462cf2bedcbd3aab094aa7d4df9c", "alias": "", "credits": "0.12300000", "debits": "0.00000000", "rewards": "0.00000000", "fees": "0.00000000", "balance": "0.12300000"}
+```
+A neat json, with our address back, as well as a "balance" key.
+
+The required php to get the balance amount is an easy one:  
+```php
+$url = 'http://bismuth.online/api/address/'.$address;    
+$info = json_decode(file_get_contents($url), true);    
+if (!isset($info['address'])) {
+    return;
+}
+$amount = round($info['balance']*100)/100;  
+```
+We get the content, json_decode it, and check it contains an "address" key. If not, the server may be broken.  
+Then, we round the amount to 2 digits after the decimal point, because our space is scarce.
+
+### Get the text to print
+
+As you saw above, the badge only display part of the address (first and last 5 chars) so it's size is shorter.
+
+Let's do that:
+
+```php
+$short = substr($address,0,5).'...'.substr($address,51,5);    
+$text = "Balance of $short is $amount \$BIS";
+```
+We now have the text part of the badge, now to the image!
+
+### Assemble the image
+
+We'll use the GD image library, part of PHP.  
+Basic steps are:
+- Create an empty image with white background
+- write our text in black
+- paste the logo
+- save the whole
+
+The matching php code is the following:  
+```php
+// Create an empty image
+$im = imagecreatetruecolor(400, 30);
+$white = imagecolorallocate($im, 255, 255, 255);
+imagefilledrectangle($im, 0, 0, 399, 29, $white);
+
+// Write text with given ttf font
+$black = imagecolorallocate($im, 0, 0, 0);
+$font = 'assets/fonts/DroidSans.ttf';
+imagettftext($im, 12, 0, 40, 21, $black, $font, $text);
+
+// Paste the 30x30 logo
+$logo = imagecreatefrompng('assets/images/BIS30.png');
+imagecopy($im, $logo, 0, 0, 0, 0, 30, 30);
+
+// Save image as png to cache
+imagepng($im, $cache_file);
+// Free the image object
+imagedestroy($im);
+```
+
+### Final code
+
+That's it
 
 
 ## Resources
