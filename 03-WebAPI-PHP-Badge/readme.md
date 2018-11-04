@@ -9,7 +9,7 @@ We'll use PHP as a backend to show how easily you can play with Bismuth, even if
 ## The initial need
 
 We run some bounties from time to time, or can publish tip jars for several projects (so can you!).  
-**I felt the need for a way to show, right on a github page, the current balance of any afddress.**
+**I felt the need for a way to show, right on a github page, the current balance of any address.**
 
 Since those are static markdown pages, no python nor php could help in a quick approach.  
 Then, I thought of the badges we can see on some github, showing build status or extra info.  
@@ -20,16 +20,16 @@ No JS, no nothing. Just an auto magically updating image.
 
 ## What we will code together
 
-We will built a short PHP script - hosted on a server of ours - that takes a Bismuth address as a param and produces a valid png image, with the matching Bis balance.
+We will built a short PHP script - hosted on a server of ours - that takes a Bismuth address as a param and produces a valid png image, with the matching BIS balance.
 
-Exemple with the address `437b30a2ea780cffb67cc220428d462cf2bedcbd3aab094aa7d4df9c`, one of my tip jar:
+Example with the address `437b30a2ea780cffb67cc220428d462cf2bedcbd3aab094aa7d4df9c`, one of my tip jar:
 
 ![TipJar](https://eggpool.net/balance/index.php?address=437b30a2ea780cffb67cc220428d462cf2bedcbd3aab094aa7d4df9c)
 
 ## Other uses
 
 Of course, this can be used to include any Bismuth related data into any website, even fully static ones.  
-You can use it to display Bis price, your latest incoming transactions, the current block height, whatever you need from the bismuth chain.  
+You can use it to display BIS price, your latest incoming transactions, the current block height, whatever you need from the bismuth chain.  
 
 Please surprise us by using it for something unexpected!
 
@@ -44,7 +44,7 @@ Please surprise us by using it for something unexpected!
 
 ### Core script
 
-An important taks in developement is to cut tasks into smaller one that are easily coded and maintained.
+An important task in developement is to cut tasks into smaller ones that are easily coded and maintained.
 
 Let's just imagine we know how to create the image, and we just need the plumbing to cache and deliver it.
 
@@ -83,7 +83,7 @@ Again, we'll split this task in several easy ones:
 ### Get the balance of an address
 
 The API doc tells us to query `http://bismuth.online/api/address/our_bismuth_address`.  
-Let fetch that in a browser to see what the result contains:
+Let's fetch that in a browser to see what the result contains:
 http://bismuth.online/api/address/437b30a2ea780cffb67cc220428d462cf2bedcbd3aab094aa7d4df9c
 
 Result is 
@@ -106,7 +106,7 @@ Then, we round the amount to 2 digits after the decimal point, because our space
 
 ### Get the text to print
 
-As you saw above, the badge only display part of the address (first and last 5 chars) so its size is shorter.
+As you saw above, the badge only shows parts of the address (first and last 5 chars) so its size is shorter.
 
 Let's do that:
 
@@ -198,11 +198,11 @@ print(file_get_contents($cache_file));
 
 ### Give us a hand!
 
-You like this tutorial? Learn something? Give us a hand!  
+You like this tutorial? Learned something? Give us a hand!  
 You can:
 
 - Star this repo
-- Post a link to that tutorial in a forum you use (no spam ever!) explaining what you liked/learn in it
+- Post a link to that tutorial in a forum you use (no spam ever!), explaining what you liked/learned in it
 - Tweet about it: [Tweet: "A blockchain aware badge for any website, with #Bismuth and #PHP"](https://twitter.com/intent/tweet?text=A%20blockchain%20aware%20badge%20for%20any%20website,%20with%20%23Bismuth%20and%20%23PHP&amp;url=https://github.com/bismuthfoundation/Hack-with-BIS/tree/master/03-WebAPI-PHP-Badge&amp;via=Eggpoolnet)
 
 ## Resources
