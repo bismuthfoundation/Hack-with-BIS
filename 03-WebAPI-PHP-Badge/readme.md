@@ -106,7 +106,7 @@ Then, we round the amount to 2 digits after the decimal point, because our space
 
 ### Get the text to print
 
-As you saw above, the badge only display part of the address (first and last 5 chars) so it's size is shorter.
+As you saw above, the badge only display part of the address (first and last 5 chars) so its size is shorter.
 
 Let's do that:
 
