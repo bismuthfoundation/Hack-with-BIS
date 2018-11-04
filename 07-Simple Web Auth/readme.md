@@ -2,7 +2,8 @@
 
 Here is a little known use case I was astonished to see at first, that can have quite a lot of variations.
 
-I saw it first on https://pokapoka.biz. I asked the dev if she could write some tuto, but she prefered that I do it and gave me the related code so I could explain.
+I saw it first on https://pokapoka.biz.  
+I asked the dev if she could write some tuto, but she prefered that I do it and gave me the related code so I could explain.
 
 ## The goal
 
@@ -52,7 +53,7 @@ In fact, she is not really at ease with python, so she copied a demo plugin and 
 Bismuth plugins are an incredibly easy way to get events from the chain.  
 You just need to place the plugin file in the "plugins" directory of a bismuth node, and voila!
 
-Pokapoka used the generic webhook, as is, nothing modified:
+Pokapoka used the generic webhook, as is, nothing modified:  
 https://github.com/bismuthfoundation/BismuthPlugins/blob/master/plugins/010_webhook/__init__.py
 
 This plugin adds a "webhook" action to the node and other plugins. Just drop it to your plugins dir and you'll be able to trigger any webhook, in its thread - no node slow down - as you want.
