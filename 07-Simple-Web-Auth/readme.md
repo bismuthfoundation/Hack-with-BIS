@@ -118,7 +118,7 @@ You can:
 
 - Star this repo
 - Post a link to that tutorial in a forum you use (no spam ever!) explaining what you liked/learn in it
-- Tweet about it: [Tweet: "An innovative blockchain account validation mechanism for the web, with #Bismuth plugins"](https://twitter.com/intent/tweet?text=An%20innovative%20blockchain%20account%20validation%20mechanism%20for%20the%20web,%20with%20%23Bismuth%20plugins&amp;url=https://github.com/bismuthfoundation/Hack-with-BIS/tree/master/07-Simple%20Web%20Auth&amp;via=Eggpoolnet)
+- Tweet about it: [Tweet: "An innovative blockchain account validation mechanism for the web, with #Bismuth plugins"](https://twitter.com/intent/tweet?text=An%20innovative%20blockchain%20account%20validation%20mechanism%20for%20the%20web,%20with%20%23Bismuth%20plugins&amp;url=https://github.com/bismuthfoundation/Hack-with-BIS/tree/master/07-Simple-Web-Auth&amp;via=Eggpoolnet)
 
 
 # Licence
