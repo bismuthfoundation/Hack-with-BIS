@@ -203,7 +203,7 @@ You can:
 
 - Star this repo
 - Post a link to that tutorial in a forum you use (no spam ever!) explaining what you liked/learn in it
-- Tweet about it: [Tweet: "A blockchain aware badge for any website, with #Bismuth and #PHP"](https://twitter.com/intent/tweet?text=A blockchain aware badge for any website, with #Bismuth and #PHP&amp;url=https://github.com/bismuthfoundation/Hack-with-BIS/tree/master/03-WebAPI-PHP-Badge&amp;via=Eggpoolnet)
+- Tweet about it: [Tweet: "A blockchain aware badge for any website, with #Bismuth and #PHP"](https://twitter.com/intent/tweet?text=A%20blockchain%20aware%20badge%20for%20any%20website,%20with%20#Bismuth%20and%20#PHP&amp;url=https://github.com/bismuthfoundation/Hack-with-BIS/tree/master/03-WebAPI-PHP-Badge&amp;via=Eggpoolnet)
 
 ## Resources
 
