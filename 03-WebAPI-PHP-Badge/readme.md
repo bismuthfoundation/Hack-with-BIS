@@ -9,7 +9,7 @@ We'll use PHP as a backend to show how easily you can play with Bismuth, even if
 ## The initial need
 
 We run some bounties from time to time, or can publish tip jars for several projects (so can you!).  
-**I felt the need for a way to show, right on a github page, the current balance of the pot.**
+**I felt the need for a way to show, right on a github page, the current balance of any afddress.**
 
 Since those are static markdown pages, no python nor php could help in a quick approach.  
 Then, I thought of the badges we can see on some github, showing build status or extra info.  
