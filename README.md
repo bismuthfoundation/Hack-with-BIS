@@ -11,6 +11,13 @@ https://github.com/bismuthfoundation/Hack-with-BIS/tree/master/03-WebAPI-PHP-Bad
 
 
 
+## 07 - A Simple Web auth with Bismuth
+
+Minimal approach to pseudonymous account validation, making use of the Bismuth plugins.  
+https://github.com/bismuthfoundation/Hack-with-BIS/tree/master/07-Simple-Web-Auth  
+
+Simple example with many variants.
+
 ## Licence
 
 These tutorials and code snippets are (c) the Bismuth Foundation and their respoective author.  
