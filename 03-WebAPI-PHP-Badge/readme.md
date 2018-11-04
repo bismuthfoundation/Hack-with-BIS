@@ -22,7 +22,8 @@ No JS, no nothing. Just an auto magically updating image.
 
 We will built a short PHP script - hosted on a server of ours - that takes a Bismuth address as a param and produces a valid png image, with the matching Bis balance.
 
-Exemple with the address `437b30a2ea780cffb67cc220428d462cf2bedcbd3aab094aa7d4df9c`, one of my tip jar:  
+Exemple with the address `437b30a2ea780cffb67cc220428d462cf2bedcbd3aab094aa7d4df9c`, one of my tip jar:
+
 ![TipJar](https://eggpool.net/balance/index.php?address=437b30a2ea780cffb67cc220428d462cf2bedcbd3aab094aa7d4df9c)
 
 ## Other uses
@@ -32,10 +33,49 @@ You can use it to display Bis price, your latest incoming transactions, the curr
 
 Please surprise us by using it for something unexpected!
 
+## Step by Step
+
+### Architecture
+
+- The script will take a single "address" get parameter as input
+- Images will be cached on disk for some time to avoid cpu load
+- Data will be obtained by the http api, "address" endpoint 
+- We will prepend the Bismuth logo
+
+### Core script
+
+An important taks in developement is to cut tasks into smaller one that are easily coded and maintained.
+
+Let's just imagine we know how to create the image, and we just need the plumbing to cache and deliver it.
+
+- Get the address param
+- Does a cache file for it already exists? if no, create and save
+- Is the cache fresh enough? If yes, send it, else create and save
+
+In php 101, this is the following:
+
+```
+$address = $_GET['address'];
+
+$cache_file = "./cache/$address.png";
+if (!file_exists($cache_file)) {
+    generate_and_save($address, $cache_file);
+} elseif (time() - filemtime($cache_file) > 60 * 10) {
+    // No more than 1 request to the API per address and per 10 minutes.
+    generate_and_save($address, $cache_file);
+}
+
+print(file_get_contents($cache_file));
+```
+
+
 
 ## Resources
 
-- The explorers and API code: xx
+- Full code of this tuto: https://github.com/bismuthfoundation/Hack-with-BIS/tree/master/03-WebAPI-PHP-Badge/code
+
+- Detail of the available Bismuth http API commands: http://bismuth.online/apihelp
+- The explorers and API code: https://github.com/maccaspacca/BismuthToolsWeb
 
 ## Licence
 
