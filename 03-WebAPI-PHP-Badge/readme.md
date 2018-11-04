@@ -15,7 +15,7 @@ Since those are static markdown pages, no python nor php could help in a quick a
 Then, I thought of the badges we can see on some github, showing build status or extra info.  
 
 How does that work?  
-Very simply, it's a dynamic image that is generated from an external page, and embedded into the static page.  
+Very simply, it's a dynamic image that is generated from an external script, and embedded into the static page.  
 No JS, no nothing. Just an auto magically updating image.
 
 ## What we will code together
@@ -72,7 +72,7 @@ print(file_get_contents($cache_file));
 
 **Generate and save**
 
-Now, we miss a `generate_and_save` function, that takes a `$address` and the location of the `$cache_file` 
+Now, we miss a `generate_and_save` function that takes a `$address` and the location of the `$cache_file`.
 
 Again, we'll split this task in several easy ones:
 - get the balance of the address
@@ -149,8 +149,61 @@ imagedestroy($im);
 
 ### Final code
 
-That's it
+That's it, almost done!!! 
+Only missing thing is to send the proper mime-type in headers so that the browsers know it's a png image:
 
+```php
+<?php
+header('Content-type: image/png');
+
+$address = $_GET['address'];
+
+function generate_and_save($address, $cache_file) {
+    $url = 'http://bismuth.online/api/address/'.$address;    
+    $info = json_decode(file_get_contents($url), true);    
+    if (!isset($info['address'])) {
+        return;
+    }
+    $amount = round($info['balance']*100)/100;       
+    $short = substr($address,0,5).'...'.substr($address,51,5);    
+    $text = "Balance of $short is $amount \$BIS";
+    
+    $im = imagecreatetruecolor(400, 30);
+    $white = imagecolorallocate($im, 255, 255, 255);
+    imagefilledrectangle($im, 0, 0, 399, 29, $white);
+
+    $black = imagecolorallocate($im, 0, 0, 0);
+    $font = 'assets/fonts/DroidSans.ttf';
+    imagettftext($im, 12, 0, 40, 21, $black, $font, $text);
+
+    $logo = imagecreatefrompng('assets/images/BIS30.png');
+    imagecopy($im, $logo, 0, 0, 0, 0, 30, 30);
+
+    imagepng($im, $cache_file);
+    imagedestroy($im);
+}
+
+$cache_file = "./cache/$address.png";
+if (!file_exists($cache_file)) {
+    generate_and_save($address, $cache_file);
+} elseif (time() - filemtime($cache_file) > 60 * 10) {
+    // No more than 1 request to the API per address and per 10 minutes.
+    generate_and_save($address, $cache_file);
+}
+
+print(file_get_contents($cache_file));
+```
+
+> Now, it's your turn to play with this simple script and amaze us!
+
+### Give us a hand!
+
+You like this tutorial? Learn something? Give us a hand!  
+You can:
+
+- star this repo
+- post a link to that tutorial in a forum you use (no spam ever!) explaining what you liked/learn in it
+- tweet about it: (bla)[https://twitter.com/]
 
 ## Resources
 
