@@ -62,7 +62,7 @@ Only things to edit there were 2 config variables:
 - the URL of the php webhook to call
 - the bismuth address to target (pokapoka's)
 
-```
+```python
 # Hook definition - Edit to your specific hook
 TYPE = 'GET'
 URL = 'http://127.0.0.1/transaction.php'
@@ -100,8 +100,10 @@ Let meditate on that...
 
 # Resources
 
-- Full code for this tuto:  
-  (actually, it's just the 2 related plugins, as is...)
+- Full code for this tuto: lol! Actually, it's just the 2 related plugins, as is:  
+  https://github.com/bismuthfoundation/BismuthPlugins/blob/master/plugins/010_webhook/__init__.py  
+  https://github.com/bismuthfoundation/BismuthPlugins/blob/master/plugins/201_on_transactions/__init__.py
+  
 - The Bismuth plugins repo with sample plugins: https://github.com/bismuthfoundation/BismuthPlugins
 
 # Licence
