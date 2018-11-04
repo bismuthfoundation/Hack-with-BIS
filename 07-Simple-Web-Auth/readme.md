@@ -29,7 +29,7 @@ Now, the website owner wants you to confirm your account, and make sure you ente
 ## Account confirmation
 
 To achieve that, Pokapoka only requires that you send a 0 bis transaction to an address of hers.  
-It costs you only the minimal fees (so you prove you have a working wallet, you can't spam the service for free).  
+It only costs you the minimal fees (so you prove you have a working wallet, you can't spam the service for free).  
 
 Pokapoka did even give a bisurl (a single string encoding the whole transaction) so you can paste and send in a few clicks from your wallet, without error.
 
