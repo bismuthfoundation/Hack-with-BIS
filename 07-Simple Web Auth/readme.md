@@ -54,7 +54,7 @@ https://github.com/bismuthfoundation/BismuthPlugins/blob/master/plugins/010_webh
 This plugin adds a "webhook" action to the node and other plugins. Just drop it to your plugins dir and you'll be able to trigger any webhook, in its thread - no node slow down - as you want.
 
 Then she used the "on transactions" plugin:  
-https://github.com/bismuthfoundation/BismuthPlugins/blob/master/plugins/201_on_transactions/__init__.py
+https://github.com/bismuthfoundation/BismuthPlugins/blob/master/plugins/201_on_transactions/__init__.py  
 This plugin generates an event on every block, passing the block info and every transaction.  
 If a transaction matches the target address, it triggers... the webhook plugin!
 
