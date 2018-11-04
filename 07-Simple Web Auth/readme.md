@@ -28,7 +28,9 @@ Now, the website owner wants you to confirm your account, and make sure you ente
 ## Account confirmation
 
 To achieve that, Pokapoka only requires that you send a 0 bis transaction to an address of hers.  
-It costs you only the minimal fees (so you prove you have a working wallet, you can't spam the service for free)  
+It costs you only the minimal fees (so you prove you have a working wallet, you can't spam the service for free).  
+
+Pokapoka did even give a bisurl (a single string encoding the whole transaction) so you can paste and send in a few clicks from your wallet, without error.
 
 When the website sees an incoming transaction to that address, it validates the matching account.
 
@@ -39,6 +41,8 @@ More could be added that we won't discuss here:
 - Lost password (show a new password, encoded with your pubkey, so only you can decode)
 - Destroy account via a specific message
 - Send BIS to credit your account on the website or pay for a specific feature
+
+- and full featured auth mechanisms, like 2FA...
 
 ## Server side
 
@@ -105,6 +109,16 @@ Let meditate on that...
   https://github.com/bismuthfoundation/BismuthPlugins/blob/master/plugins/201_on_transactions/__init__.py
   
 - The Bismuth plugins repo with sample plugins: https://github.com/bismuthfoundation/BismuthPlugins
+
+### Give us a hand!
+
+You like this tutorial? Learn something? Give us a hand!  
+You can:
+
+- Star this repo
+- Post a link to that tutorial in a forum you use (no spam ever!) explaining what you liked/learn in it
+- Tweet about it: [Tweet: "An innovative blockchain account validation mechanism for the web, with #Bismuth plugins"](https://twitter.com/intent/tweet?text=An%20innovative%20blockchain%20account%20validation%20mechanism%20for%the%web,%20with%20%23Bismuth%20plugins&amp;url=https://github.com/bismuthfoundation/Hack-with-BIS/tree/master/07-Simple%20Web%20Auth&amp;via=Eggpoolnet)
+
 
 # Licence
 
