@@ -49,15 +49,30 @@ That's the case with tokens.
 To match ETH terminology, current Bismuth tokens are partially ERC20 compliant.  
 They do not allow delegation (no approve/allowance): you can't have someone else spend your tokens and approve.
 
-## Bismuth Smart protocols
+More feature packed tokens types may be added soon.
 
-Rather than having immutable on chain code, that has all power on the funds and can have them destroyed or locked up, and is run by every single node, Bismuth favors the concept of "smart" protocols.
+## Bismuth "Smart" protocols
+
+Rather than having immutable on chain code, that has all power on the funds and can have them destroyed or locked up, plus is run by every single node, Bismuth favors the concept of "smart" protocols.  
+
+> I use the quotes, because no contract/protocol in crypto is really "smart". It's just code that is as smart - or dumb - as the dev who wrote it.
 
 A protocol is based upon the Bismuth transactions, that can be considered as abstract data.  
 It's an agreement between 2 or more parties on what that data means, and what to do when an event occurs.  
 
-- Only 
+- Only clients that are involved in a protocol need to read the data and run the code. Not every node.
+- Code is not on chain. Can be updated, fixed, does not clobber the chain, does not consume node resources.
+- They are a "contract" between agreeing parties, with the logic ideally being public
+- Anyone can run the logic over the on chain data and verify that everyone acted as they should.
+- Protocols can evolve, be overloaded, or serve as basis for more evolved protocols.
+
+See the existing Bismuth protocols: https://github.com/bismuthfoundation/Hack-with-BIS/tree/master/01-Concepts/protocols
 
 # References
 
+# FAQ
 
+## If the code is not on chain, you have to trust the owner of the contract?
+
+## if there are several implementations of a protocol, what if one implementation does not works as intended, or tries to cheat?
+Would you trust an unknown software provider with a bitcoin wallet?
