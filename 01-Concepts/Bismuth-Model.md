@@ -70,6 +70,9 @@ See the existing Bismuth protocols: https://github.com/bismuthfoundation/Hack-wi
 
 # References
 
+- Regarding Eth: "Eth: So far, this particular choice of design has resulted in more than half a billion dollar being compromised in one way or the other"  
+  https://hackernoon.com/yes-this-kid-really-just-deleted-150-million-dollar-by-messing-around-with-ethereums-smart-2d6bb6750bb9
+
 # FAQ
 
 ## If the code is not on chain, you have to trust the owner of the contract?
