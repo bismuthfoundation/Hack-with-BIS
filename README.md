@@ -3,6 +3,13 @@ A series of practical, step by step tutorials to build apps and dApps on top of 
 
 Merely a WIP right now, will be advertized when first tuto is ready.
 
+## 01 - The Bismuth core concepts
+
+Since Bismuth is a complete from scratch platform, there are some base concepts you need to grab first.  
+Abstract transactions, Protocols, Private contract, how to interact with BIS.
+
+https://github.com/bismuthfoundation/Hack-with-BIS/tree/master/01-Concepts
+
 
 ## 03 - Creating a blockchain aware Badge with PHP and the Web API
 
