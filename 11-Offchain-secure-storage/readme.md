@@ -11,7 +11,7 @@ Real content is stored on participating users drives, only content hashes are st
 ## Architecture
 
 - A client dApp  
-  Runs a webserver, connects to an online wallet server or local node
+  Runs a webserver, connects to an online wallet server or local node, shows contentt via an embedded browser or simple html viewer.
 
 - A custom dApp protocol  
   So (most recent/last required) content can be cached and synced across clients, available even if the author app is not online
@@ -55,3 +55,19 @@ Real content is stored on participating users drives, only content hashes are st
 - Her dApp client fetches the content from John's webserver and caches it locally, or tries to get it from other registered nodes if not available.
 - Option: who you follow can be stored on chain, so Sarah can specifically ask John's followers for his content.
 - Sarah's dApp client automatically checks the validity of the content via the on chain hash and history.
+
+
+
+# Pros
+
+- Users only store their content on their drive, as well as the content of the authors they follow: they can select what they host (no legal concern, no spam, no pollution)
+- The more an author is followed, the more his content is replicated and easily available
+- minimal load on the core bismuth chain (number of transactions as well as storage)
+- can tip the author in app
+- Users can cap disk usage
+- only html, size will stay reasonable and can be capped to avoid abuses.
+
+- can evolve with private messaging, off chain (peer to peer DM, encrypted with bis keys)
+
+- Most needed PoC to demo the use of offchain storage and only hashes onchain!
+
