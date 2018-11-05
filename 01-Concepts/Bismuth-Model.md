@@ -70,6 +70,12 @@ See the existing Bismuth protocols: https://github.com/bismuthfoundation/Hack-wi
 
 # References
 
+Eth Horror stories:
+
+- How to Not Destroy Millions in Smart Contracts (Pt. 1)  
+  https://hackernoon.com/how-to-not-destroy-millions-in-smart-contracts-pt-1-bdefac3656b7
+- How to Not Destroy Millions in Smart Contracts (Pt. 2)  
+  https://hackernoon.com/how-to-not-destroy-millions-in-smart-contracts-pt-2-85c4d8edd0cf
 - Regarding Eth: "Eth: So far, this particular choice of design has resulted in more than half a billion dollar being compromised in one way or the other"  
   https://hackernoon.com/yes-this-kid-really-just-deleted-150-million-dollar-by-messing-around-with-ethereums-smart-2d6bb6750bb9
 
