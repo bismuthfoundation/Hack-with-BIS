@@ -61,7 +61,7 @@ The protocol class still is reserved.
 
 The "twitter:" protocol is used by the twitter giveaway bot.
 
-TODO
+https://github.com/bismuthfoundation/Hack-with-BIS/blob/master/01-Concepts/protocols/twitter.md
 
 # Third party protocols
 
