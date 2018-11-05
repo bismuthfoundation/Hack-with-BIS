@@ -40,7 +40,7 @@ Real content is stored on participating users drives, only content hashes are st
 - The post is deleted from John's webserver
 - The hash of the post content is stored as a "html:delete" transaction so other dApps clients can remove it also.
 
-## John edits a post
+## John edits a post
 
 - The url of the post will change, since the hash will
 - Title will stay the same
