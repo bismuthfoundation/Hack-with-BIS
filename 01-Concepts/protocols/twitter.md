@@ -29,7 +29,7 @@ Only one operation, no subclass
 The bot will give you #Bismuth for tweeting about it.  
 You then need to register your tweet on the blockchain to qualify for participation.  
 
-![https://pbs.twimg.com/media/DeH64udWAAAjMAj.jpg]
+![tuto](https://pbs.twimg.com/media/DeH64udWAAAjMAj.jpg)
 
 ### Admin side
 
