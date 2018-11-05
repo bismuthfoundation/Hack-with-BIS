@@ -82,6 +82,14 @@ Eth Horror stories:
 # FAQ
 
 ## If the code is not on chain, you have to trust the owner of the contract?
+Yes. Kinda. Like you trust an Eth smart contract owner not to kill it and get all the funds, or like you trust him to have written bugless code that will run 10's of years without any possible tweak.
 
 ## if there are several implementations of a protocol, what if one implementation does not works as intended, or tries to cheat?
-Would you trust an unknown software provider with a bitcoin wallet?
+Would you trust an unknown software provider with a bitcoin wallet?  
+You don't.  
+Once you give your keys to an app, that app virtually can do anything with the funds/data.  
+Why open source and reputation are so important.  
+
+In the event of a cheating app, however, this would just impact the specific users of this app.  
+Since this app would emit data or transactions that does not comply to the protocol, those transactinos will be ignored by the legit apps.  
+You can see that as a "virtual" fork in the protocol state.
