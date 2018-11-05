@@ -4,21 +4,22 @@ The current Bismuth model is very different from the Ethereum one.
 You simply can't transpose what is done with smart contracts and solidity.
 Bismuth does not need public "smart" contracts atm, and does not have a VM where every nodes executes the same code.
 
-Although it could be seen as a limitation, it's in fact quite a strength, and many exploits that have taken place with ETH smart contracts simply could not have been done on a Bismuth like architecture.
+Although it could be seen as a limitation, it's in fact quite a strength, and some exploits that have taken place with ETH smart contracts could not have been successful on a Bismuth like architecture.
 
 
 ## Ethereum
 
 - You have to learn a new language, Solidity
-- There are severe pitfalls (underflow, visibility, access rights)
-- Flawed contracts can give an infinity of coins to a user
+- There are some specific pitfalls (underflow, visibility, access rights)
+- Flawed contract code can give an infinity of coins to a user
 - Several hacks and horror stories already in Eth smart contracts History
 - Smart contracts can "own" funds 
 - smart contracts live in the chain forever and can't be stopped nor upgraded unless the author provided a kill switch
-- bugs or flaws are forever
-- if there is a kill switch, the owner will get all the funds.
+- if there is a kill switch, the owner can get all the funds of a contract.
 - every contract invocation is processed by every single eth node in a VM - Virtual Machine - and consumes gas
 - contracts can not directly access outside resources
+
+Eth model has some strengths and some use cases that you could simply not replicate with BIS, but BIS has other uses.
 
 ## Bismuth
 
@@ -32,11 +33,10 @@ Although it could be seen as a limitation, it's in fact quite a strength, and ma
 - Contract invocation are only run by the clients that have an interest in that specific contract
 - Private contracts can do anything, including accessing outside data without the need for on chain oracles
 
-Moreover:
 
 ## Bismuth tokens
 
-Things that are to be widely used, like tokens, are not handled via a generic VM and some buggy user code.  
+Things that are to be widely used, like tokens, are not handled via a generic VM and user code.  
 If a use case is wanted enough, it can be integrated in Bismuth core.  
 The Bismuth dev team does not have the weight of Bitcoin or ETH, and can move forward very very fast.
 
@@ -70,7 +70,8 @@ See the existing Bismuth protocols: https://github.com/bismuthfoundation/Hack-wi
 
 # References
 
-Eth Horror stories:
+Some Eth Horror stories, showing whatever the architecture, buggy code can be a mess.  
+Immutable buggy code, even more.
 
 - How to Not Destroy Millions in Smart Contracts (Pt. 1)  
   https://hackernoon.com/how-to-not-destroy-millions-in-smart-contracts-pt-1-bdefac3656b7
@@ -82,7 +83,9 @@ Eth Horror stories:
 # FAQ
 
 ## If the code is not on chain, you have to trust the owner of the contract?
-Yes. Kinda. Like you trust an Eth smart contract owner not to kill it and get all the funds, or like you trust him to have written bugless code that will run 10's of years without any possible tweak.
+Yes. Kinda. Like you trust an Eth smart contract owner not to kill it and get all the funds, or like you trust him to have written bugless code that will run 10's of years without any possible tweak.  
+
+As a matter of fact, ETH and solidity could be more suited for purely currency automated transfers, whereas BIS protocols allows for easier to dev, run and maintain complex apps on top of the blockchain.
 
 ## if there are several implementations of a protocol, what if one implementation does not works as intended, or tries to cheat?
 Would you trust an unknown software provider with a bitcoin wallet?  
