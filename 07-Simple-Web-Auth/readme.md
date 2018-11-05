@@ -40,7 +40,7 @@ When the website sees an incoming transaction to that address, it validates the 
 More could be added that we won't discuss here:
 
 - Lost password (show a new password, encoded with your pubkey, so only you can decode)
-- Destroy account via a specific message
+- Delete account via a specific message
 - Send BIS to credit your account on the website or pay for a specific feature
 
 - and full featured auth mechanisms, like 2FA...
@@ -56,11 +56,11 @@ You just need to place the plugin file in the "plugins" directory of a bismuth n
 Pokapoka used the generic webhook, as is, nothing modified:  
 https://github.com/bismuthfoundation/BismuthPlugins/blob/master/plugins/010_webhook/__init__.py
 
-This plugin adds a "webhook" action to the node and other plugins. Just drop it to your plugins dir and you'll be able to trigger any webhook, in its thread - no node slow down - as you want.
+This plugin adds a "webhook" action to the node and other plugins. Just drop it to your plugins dir and you'll be able to trigger any webhook in its thread - no node slow down - as you want.
 
 Then she used the "on transactions" plugin:  
 https://github.com/bismuthfoundation/BismuthPlugins/blob/master/plugins/201_on_transactions/__init__.py  
-This plugin generates an event on every block, passing the block info and every transaction.  
+This plugin generates an event on every block, parsing the block info and every transaction.  
 If a transaction matches the target address, it triggers... the webhook plugin!
 
 Only things to edit there were 2 config variables:
@@ -76,7 +76,7 @@ URL = 'http://127.0.0.1/transaction.php'
 TARGET_ADDRESS = '679a5ef3ad5e75d9ba7773bc5986e6d390556a85e92a78db55aa2471'
 ```
 
-The rest is simple PHP: transaction.php then gets a "data" param filled with a php array:
+The rest is simple PHP: transaction.php gets a "data" param filled with a php array:
 ```
 [
 block_height,   // block # of the matching transaction
@@ -98,9 +98,9 @@ Pokapoka then just has to match the 4th field to its unactivated users list and 
 
 ## Two strings...
 
-Two strings to edit, that's all it took to add an innovative, blockchain based, pseudonymous account validation to an existing website...
+Two strings to edit, that's all it took to add an innovative, blockchain based and pseudonymous account validation to an existing website...
 
-Let meditate on that...
+Let's meditate on that...
 
 
 # Resources
@@ -124,4 +124,4 @@ You can:
 # Licence
 
 This tutorial is (c) EggdraSyl and the Bismuth Foundation and released under a MIT licence.
-In a nutshell, you can do what you want with it provided you keep this notice intact and hold no responsability against the authors.
+In a nutshell, you can do what you want with it, provided you keep this notice intact and hold no responsability against the authors.
