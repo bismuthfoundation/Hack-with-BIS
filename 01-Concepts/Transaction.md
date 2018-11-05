@@ -109,6 +109,9 @@ Check the existing protocols list and Contact a core dev beforehand.
 
 See the tokens protocol for an implemented example of how this works.
 
+Current known Bismuth protocols:  
+https://github.com/bismuthfoundation/Hack-with-BIS/blob/master/01-Concepts/protocols/readme.md
+
 ### Transaction fees
 
 BIS transaction fees are fixed and depend only on the openfield length in byte.  
