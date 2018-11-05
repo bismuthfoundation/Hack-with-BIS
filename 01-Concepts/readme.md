@@ -4,7 +4,7 @@ A quick overview of main Bismuth concept.
 
 ## The Bismuth Transactions
 
-BIS comes with 3 different type of transactions, unified under a common structure.  
+BIS comes with 3 different types of transactions, unified under a common structure.  
 https://github.com/bismuthfoundation/Hack-with-BIS/blob/master/01-Concepts/Transaction.md
 
 ## Interacting with Bismuth
