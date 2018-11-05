@@ -13,19 +13,19 @@ By convention, we refer to the protocol by their "class:" operation handle.
 
 These protocols are hard coded in Bismuth core or in the Hypernodes.
 
-## Alias
+## Alias
 
 The "alias:" protocol allows for registration of on-chain alias of your address
 
 TODO
 
-## Token
+## Token
 
 The "token:" protocol allows for BIS tokens management: issuance and transfer.
 
 TODO
 
-## Hypernode
+## Hypernode
 
 Handles registration and unregistration of the hypernodes.
 
