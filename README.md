@@ -33,5 +33,5 @@ https://github.com/bismuthfoundation/Hack-with-BIS/tree/master/11-Offchain-secur
 
 ## Licence
 
-These tutorials and code snippets are (c) the Bismuth Foundation and their respoective author.  
+These tutorials and code snippets are (c) the Bismuth Foundation and their respective author.  
 They are released under a MIT licence. In a nutshell, you can do what you want with it provided you keep this notice intact and hold no responsability against the authors.
