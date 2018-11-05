@@ -18,7 +18,7 @@ These protocols are hard coded in Bismuth core or in the Hypernodes.
 
 The "alias:" protocol allows for registration of on-chain alias of your address
 
-TODO
+https://github.com/bismuthfoundation/Hack-with-BIS/blob/master/01-Concepts/protocols/alias.md
 
 ## Color
 
@@ -42,7 +42,7 @@ The "protocol:" protocol is reserved for future use.
 
 The "token:" protocol allows for BIS tokens management: issuance and transfer.
 
-TODO
+https://github.com/bismuthfoundation/Hack-with-BIS/blob/master/01-Concepts/protocols/token.md
 
 
 # Bismuth team protocols
