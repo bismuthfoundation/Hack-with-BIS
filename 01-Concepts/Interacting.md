@@ -16,7 +16,7 @@ You can use an official explorer or run your own. (Running your own is advised i
 - code:https://github.com/maccaspacca/BismuthToolsWeb
 - official explorer API: http://bismuth.online/apihelp
 
-## Official API
+## Official API
 
 Get live info on Bismuth servers and their state.  
 WIP
@@ -30,7 +30,7 @@ This is what is used by official light wallets.
 
 https://github.com/bismuthfoundation/WalletServer/blob/master/Doc/Readme.md
 
-## WebSocket server API
+## WebSocket server API
 
 WIP. To be used by html/js apps.
 
