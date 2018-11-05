@@ -18,6 +18,12 @@ https://github.com/bismuthfoundation/Hack-with-BIS/tree/master/07-Simple-Web-Aut
 
 Simple example with many variants.
 
+## 11 - Offchain secure storage
+
+Specs for a PoC dApp demoing the use of offchain secure storage, for a Peer To Peer content distribution network.
+
+https://github.com/bismuthfoundation/Hack-with-BIS/tree/master/11-Offchain-secure-storage
+
 ## Licence
 
 These tutorials and code snippets are (c) the Bismuth Foundation and their respoective author.  
