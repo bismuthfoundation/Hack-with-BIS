@@ -7,7 +7,7 @@ This is a template file to use as a basis to document a new protocol.
 
 Describe the purpose of the protocol
 
-## Maintener
+## Maintainer
 
 Who is responsible for design and maintenance of that protocol?
 
@@ -20,6 +20,10 @@ Describe op1 and related openfield if any
 ### protocol:op2
 
 Describe op2 and related openfield if any
+
+## Usage
+
+A few word on intended usage and other info.
 
 ## Related resources
 
