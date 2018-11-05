@@ -2,7 +2,27 @@
 
 A quick overview of main Bismuth concept.
 
-WIP
+## The Bismuth Transactions
+
+BIS comes with 3 different types of transactions, unified under a common structure.  
+https://github.com/bismuthfoundation/Hack-with-BIS/blob/master/01-Concepts/Transaction.md
+
+## Interacting with Bismuth
+
+There are many ways to interact with the Bismuth blockchain, depending on the kind on data you need, and wether you have a local running node or not.  
+Here is an overview:  
+https://github.com/bismuthfoundation/Hack-with-BIS/blob/master/01-Concepts/Interacting.md
+
+## Current Bismuth Protocols
+
+"Smart" abstract protocols are an essential part of Bismuth.  
+Transactions can make use of the "operation" field to emulate abstract behaviour, that only protocol aware apps can then interpret.  
+The nodes then process these transactions as abstract data, not needing any processing by unrelated clients.
+
+https://github.com/bismuthfoundation/Hack-with-BIS/tree/master/01-Concepts/protocols
+
+
+# WIP
 
 ## Compute model
 
