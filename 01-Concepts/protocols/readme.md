@@ -33,6 +33,11 @@ Handles registration and unregistration of the hypernodes.
 https://github.com/bismuthfoundation/hypernode/blob/master/doc/registration_rules.md
 
 
+## Protocol
+
+The "protocol:" protocol is reserved for future use.
+
+
 ## Token
 
 The "token:" protocol allows for BIS tokens management: issuance and transfer.
