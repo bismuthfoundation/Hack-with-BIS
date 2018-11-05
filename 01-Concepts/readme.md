@@ -9,7 +9,7 @@ https://github.com/bismuthfoundation/Hack-with-BIS/blob/master/01-Concepts/Trans
 
 ## Interacting with Bismuth
 
-There are many ways to interact with the Bismuth blockchain, depending on the kind on data you need, and wether you have a local running node or not.  
+There are many ways to interact with the Bismuth blockchain, depending on the kind of data you need, and wether you have a local node running or not.  
 Here is an overview:  
 https://github.com/bismuthfoundation/Hack-with-BIS/blob/master/01-Concepts/Interacting.md
 
@@ -30,7 +30,7 @@ Very different from Eth
 
 - No Virtual machine
 - No public, so called "smart" contract
-- Chain is an abstract, secure, immutable storage engine
+- Chain is an abstract, secure and immutable storage engine
 - no new language to learn: Python + API does all.
 
 ## Abstract data

@@ -1,6 +1,6 @@
 # Bismuth Transactions explained
 
-Since Bismuth uses a custom bloc and transaction structure, that requires some background doc.
+Since Bismuth uses a custom block and transaction structure, that requires some background doc.
 
 ## Transaction structure
 
@@ -23,7 +23,7 @@ openfield       // (str) extra data field ("Message")
 ]
 ```
 
-### Bis transfer transaction
+### BIS transfer transaction
 
 This is a regular BIS operation, Sarah pays John 10 BIS
 
@@ -40,7 +40,7 @@ blockhash,      // (str) hash of the block, hex format, 56 hex chars
 fees,           // (str, .8f) 0.01000000
 reward          // (str, .8f) 0.00000000
 operation       // (str, max 30 char) - Empty for regular tx
-openfield       // (str) extra data field, can be used as Message.
+openfield       // (str) extra data field, can be used as Message - Example: My 10 BIS to John.
 ]
 ```
 
@@ -48,10 +48,10 @@ Sarah can use the openfield field to add a short message to the transaction.
 
 > This will raise the fees, and be stored forever in the chain.
 
-Prepending the message by "msg=" will mark the transaction as a message for client apps.
+Prepending the message by "msg=" will mark the transaction as a message for client apps. Without "msg=", the transaction will be shown as a normal tx, but the message is still visible in openfield
 
 A BIS message is such a transaction with a 0 BIS amount.  
-You can do both BIS transfer + message in a single Transaction.
+You can do both, BIS transfer + message in a single Transaction.
 
 ### Coinbase transaction
 
@@ -79,7 +79,7 @@ openfield       // (str) matching nonce
 
 ### Abstract transaction
 
-One of Bis strengths is to allow abstract transactions.  
+One of BIS strengths' is to allow abstract transactions.  
 These are transactions with 0 BIS involved, and data that is only understandable by the dApps who participate in that protocol.
 
 ```
@@ -101,7 +101,7 @@ openfield       // (str) extra data field
 
 The difference lies in the "operation" field, that is kind of a "command" operator.  
 Convention is to use strings formated as "class:operation" to allow for easy classification.  
-Say it's a kind of namespace.  
+Let's say it's a kind of namespace.  
 The openfield then holds the associated (short) data.
 
 You can define your own operations, but make sure your protocol does not use already used namespaces.  

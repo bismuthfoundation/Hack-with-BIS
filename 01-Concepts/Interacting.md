@@ -10,7 +10,7 @@ __WIP__
 
 ## Explorers APIs
 
-Bismuth explorers come with an integrated API.  
+Bismuth explorer comes with an integrated API.  
 You can use an official explorer or run your own. (Running your own is advised if you plan a high usage)
 
 - code:https://github.com/maccaspacca/BismuthToolsWeb
@@ -47,7 +47,7 @@ https://github.com/EggPool/BismuthAPI
 ## Json-rpc server
 
 An extra layer that tries to mimic bitcoind json-rpc interface and commands.  
-Most of the commands needed by a wallet or exchange are implemnted.  
+Most of the commands needed by a wallet or exchange are implemented.  
 Useful for compatibility, still the direct API is prefered for from scratch dev.
 
 https://github.com/EggPool/BismuthRPC
