@@ -1,6 +1,15 @@
 # Bismuth concepts
 
-A quick overview of main Bismuth concept.
+A quick overview of main Bismuth concepts.
+
+## No public smart contract
+
+The current Bismuth model is very different from the Ethereum one.  
+You simply can't transpose what is done with smart contracts and solidity.  
+Bismuth does not need public "smart" contracts atm, and does not have a VM where every nodes executes the same code.
+
+See Bismuth Execution model: https://github.com/bismuthfoundation/Hack-with-BIS/blob/master/01-Concepts/Bismuth-Model.md
+
 
 ## The Bismuth Transactions
 
@@ -24,14 +33,6 @@ https://github.com/bismuthfoundation/Hack-with-BIS/tree/master/01-Concepts/proto
 
 # WIP
 
-## Compute model
-
-Very different from Eth
-
-- No Virtual machine
-- No public, so called "smart" contract
-- Chain is an abstract, secure and immutable storage engine
-- no new language to learn: Python + API does all.
 
 ## Abstract data
 
