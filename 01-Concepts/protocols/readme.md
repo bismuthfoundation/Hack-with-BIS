@@ -20,9 +20,9 @@ The "alias:" protocol allows for registration of on-chain alias of your address
 
 TODO
 
-## Token
+## Color
 
-The "token:" protocol allows for BIS tokens management: issuance and transfer.
+The "color:" protocol is used as part of the hypernodes to manage colored lists and sync them across the network.
 
 TODO
 
@@ -32,13 +32,15 @@ Handles registration and unregistration of the hypernodes.
 
 https://github.com/bismuthfoundation/hypernode/blob/master/doc/registration_rules.md
 
-# Bismuth team protocols
 
-## Twitter
+## Token
 
-The "twitter:" protocol is used by the twitter giveaway bot.
+The "token:" protocol allows for BIS tokens management: issuance and transfer.
 
 TODO
+
+
+# Bismuth team protocols
 
 ## Event
 
@@ -46,6 +48,15 @@ The "event:" protocol is used by the event sourcing demo dApp.
 
 https://github.com/EggPool/BismuthEvents/blob/master/doc/events.md
 
+> Note: this was drafted before the "operation" field and only uses openfield, will be converted later on.  
+The protocol class still is reserved.
+
+
+## Twitter
+
+The "twitter:" protocol is used by the twitter giveaway bot.
+
+TODO
 
 # Third party protocols
 
