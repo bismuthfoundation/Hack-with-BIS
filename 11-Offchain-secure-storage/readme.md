@@ -2,6 +2,8 @@
 
 A proof of concept dApp to show how Bismuth dApps can use private channels to exchange and store html articles, but still benefit from the chain safety.
 
+> SPECS only atm.
+
 ## Goal
 
 A steemit like dApp, where anyone with a Bismuth address can publish html or markdown content.  
