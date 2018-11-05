@@ -7,7 +7,8 @@ This is a list of currently known protocol and operations.
 > If you plan to add a custom operation class for your use, please check this list beforehand and contact a core dev.  
   Of course, you can also built upon existing protocols (like tokens, events) if they suit your needs.
 
-By convention, we refer to the protocol by their "class:" operation handle.
+By convention, we refer to the protocol by their "class:" operation handle.  
+Also see https://github.com/bismuthfoundation/Hack-with-BIS/blob/master/01-Concepts/Transaction.md#abstract-transaction
 
 # Core Bismuth Protocols
 
