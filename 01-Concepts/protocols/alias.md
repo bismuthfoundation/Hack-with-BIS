@@ -12,7 +12,7 @@ That alias may then be used by the wallets or apps as label.
 
 > Important: An alias registration adds 1 BIS to the transaction fees.
 
-## Maintainer
+## Maintainer
 
 Bismuth core team.
 
@@ -23,7 +23,7 @@ Bismuth core team.
 - No operation, transaction to self where openfield starts with "alias="
 - Client first checks that the alias to register does not already exists.
 
-## Evolution proposal
+# Evolution proposal
 
 > This is *NOT* active yet
 
@@ -39,7 +39,7 @@ Bismuth core team.
 - Openfield contains "recipient:alias"
 - Allows to transfer an alias to another address. checks that sender is the owner of the alias
 
-### Proposal: alias:free
+### Proposal: alias:free
 
 - Operation: "alias:free"  
 - Openfield contains the alias string
