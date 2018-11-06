@@ -96,7 +96,7 @@ Yes. Kinda. Like you trust an Eth smart contract owner not to kill it and get al
 
 As a matter of fact, ETH and solidity could be more suited for purely currency automated transfers, whereas BIS protocols allows for easier to dev, run and maintain complex apps on top of the blockchain.
 
-## if there are several implementations of a protocol, what if one implementation does not works as intended, or tries to cheat?
+## if there are several implementations of a protocol, what if one implementation does not work as intended, or tries to cheat?
 Would you trust an unknown software provider with a bitcoin wallet?  
 You don't.  
 Once you give your keys to an app, that app virtually can do anything with the funds/data.  
