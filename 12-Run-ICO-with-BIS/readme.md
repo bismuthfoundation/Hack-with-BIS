@@ -58,11 +58,11 @@ Tokens related fees are paid in $BIS, so you need a small amount of $BIS to issu
 
 These fees are collected by the miners.
 
-## Resources
+## Resources
 
 You can check the "token:" protocol if you want to know more about the inner working: https://github.com/bismuthfoundation/Hack-with-BIS/blob/master/01-Concepts/protocols/token.md
 
-## Bismuth WIP
+## Bismuth WIP
 
 Some edges - mostly GUI - still are rough.  
 We are working on the following:
