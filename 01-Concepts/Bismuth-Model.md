@@ -26,6 +26,8 @@ Bismuth like smart protocols are implemented **ON TOP** of the Bismuth chain and
 
 Eth model has some strengths and some use cases that you could simply not replicate with BIS, but BIS has other uses.
 
+!(The Eth model)[https://github.com/bismuthfoundation/Hack-with-BIS/blob/master/01-Concepts/eth-model.png]
+
 ## Bismuth
 
 - No new language to learn. You can write contracts and protocols in almost any language, Python being the native language.
