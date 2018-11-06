@@ -6,6 +6,11 @@ Bismuth does not need public "smart" contracts atm, and does not have a VM where
 
 Although it could be seen as a limitation, it's in fact quite a strength, and some exploits that have taken place with ETH smart contracts could not have been successful on a Bismuth like architecture.
 
+## "Smart" contracts vs "smart" protocols in a nutshell
+
+ETH like smart contract are written in a specific language, stored on chain, and run **IN** every node.
+
+Bismuth like smart protocols are implemented **ON TOP** of the Bismuth chain and only run by concerned dApps.
 
 ## Ethereum
 
@@ -65,6 +70,7 @@ It's an agreement between 2 or more parties on what that data means, and what to
 - They are a "contract" between agreeing parties, with the logic ideally being public
 - Anyone can run the logic over the on chain data and verify that everyone acted as they should.
 - Protocols can evolve, be overloaded, or serve as basis for more evolved protocols.
+- Protocols can use protocols... for instance, a protocol could define valid implementations (with on chain hash) of itself.
 
 See the existing Bismuth protocols: https://github.com/bismuthfoundation/Hack-with-BIS/tree/master/01-Concepts/protocols
 
