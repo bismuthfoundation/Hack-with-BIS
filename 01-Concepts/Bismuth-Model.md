@@ -40,6 +40,7 @@ Eth model has some strengths and some use cases that you could simply not replic
 - Contract invocation are only run by the clients that have an interest in that specific contract
 - Private contracts can do anything, including accessing outside data without the need for on chain oracles
 
+![The Bis model](https://github.com/bismuthfoundation/Hack-with-BIS/blob/master/01-Concepts/bis-model.png)
 
 ## Bismuth tokens
 
