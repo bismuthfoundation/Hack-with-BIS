@@ -54,9 +54,9 @@ Tokens related fees are paid in $BIS, so you need a small amount of $BIS to issu
 
 - Standard Bismuth fees apply to all tokens operation: 0.01 base Fee + variable fee depending on the length of data field. 0.000011 per 10 chars
 - For Token issuance, an extra 10 BIS fee is applied.
-- The confirm popup show these before you can confirm.
+- The confirm popup shows these before you can confirm.
 
-These fees are collected by the miners.
+The fees are collected by the miners.
 
 ## Resources
 
