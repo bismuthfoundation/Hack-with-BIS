@@ -58,6 +58,16 @@ Tokens related fees are paid in $BIS, so you need a small amount of $BIS to issu
 
 The fees are collected by the miners.
 
+## Demo ICO fund account balance
+
+To server as Demo, a new address was setup with 20 $BIS.  
+Then an "ico" token was created. Total supply is 50000. That will serve as an ICO demo.
+
+Current Fund balance:
+
+![TipJar](https://eggpool.net/balance/index.php?address=7ef68a880a86ae48e077f43c509b1f959f1dd399cb8e3766e229876e)
+
+
 ## Resources
 
 You can check the "token:" protocol if you want to know more about the inner working: https://github.com/bismuthfoundation/Hack-with-BIS/blob/master/01-Concepts/protocols/token.md
