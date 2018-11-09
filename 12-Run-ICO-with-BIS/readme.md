@@ -8,7 +8,7 @@ Since basic Tokens (almost ERC20 compatible) are by default with Bismuth core, y
 
 - You need a Bismuth Wallet https://github.com/hclivess/Bismuth/releases
 - You probably want a fresh new bismuth address to dedicate to the ICO
-- You have at least 20 BIS on that address to cover for the fees
+- You have at least 20 BIS on that address to cover the fees
 
 ## Create your token
 
