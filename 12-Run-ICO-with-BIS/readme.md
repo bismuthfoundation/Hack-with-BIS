@@ -60,7 +60,7 @@ The fees are collected by the miners.
 
 ## Demo ICO fund account balance
 
-To server as Demo, a new address was setup with 20 $BIS.  
+To be used as Demo, a new address was setup with 20 $BIS.  
 Then an "ico" token was created. Total supply is 50000. That will serve as an ICO demo.
 
 Current Fund balance:
@@ -70,7 +70,8 @@ Current Fund balance:
 
 ## Resources
 
-You can check the "token:" protocol if you want to know more about the inner working: https://github.com/bismuthfoundation/Hack-with-BIS/blob/master/01-Concepts/protocols/token.md
+You can check the "token:" protocol if you want to know more about the inner working:  
+https://github.com/bismuthfoundation/Hack-with-BIS/blob/master/01-Concepts/protocols/token.md
 
 ## Bismuth WIP
 
