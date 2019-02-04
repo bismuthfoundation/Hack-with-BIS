@@ -6,6 +6,9 @@ from bismuthclient.bismuthclient import BismuthClient
 
 if __name__ == "__main__":
     client = BismuthClient(wallet_file='wallet.der')
+    if not client.address:
+        client.new_wallet()
+        client.load_wallet()
     """
     BismuthClient does the heavy lifting of finding and connecting to a working wallet server.
     """
