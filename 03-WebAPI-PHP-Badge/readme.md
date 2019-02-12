@@ -26,7 +26,7 @@ PHP installed with GD support and FreeType support enabled.
 We will built a short PHP script - hosted on a server of ours - that takes a Bismuth address as a param and produces a valid png image, with the matching BIS balance.
 
 **Example URL**  
-http://localhost/index.php?address=437b30a2ea780cffb67cc220428d462cf2bedcbd3aab094aa7d4df9c
+http://localhost/index.php?address=437b30a2ea780cffb67cc220428d462cf2bedcbd3aab094aa7d4df9c  
 Changing the BIS address within the URL automatically changes the badge data.
 
 Example with the address `437b30a2ea780cffb67cc220428d462cf2bedcbd3aab094aa7d4df9c`, one of my tip jar:
