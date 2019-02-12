@@ -18,14 +18,14 @@ How does that work?
 Very simply, it's a dynamic image that is generated from an external script, and embedded into the static page.  
 No JS, no nothing. Just an auto magically updating image.
 
-**Requirements**
+**Requirements**  
 PHP installed with GD support and FreeType support enabled.
 
 ## What we will code together
 
 We will built a short PHP script - hosted on a server of ours - that takes a Bismuth address as a param and produces a valid png image, with the matching BIS balance.
 
-**Example URL**
+**Example URL**  
 http://localhost/index.php?address=437b30a2ea780cffb67cc220428d462cf2bedcbd3aab094aa7d4df9c
 Changing the BIS address within the URL automatically changes the badge data.
 
