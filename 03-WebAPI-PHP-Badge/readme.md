@@ -18,9 +18,16 @@ How does that work?
 Very simply, it's a dynamic image that is generated from an external script, and embedded into the static page.  
 No JS, no nothing. Just an auto magically updating image.
 
+**Requirements**
+PHP installed with GD support and FreeType support enabled.
+
 ## What we will code together
 
 We will built a short PHP script - hosted on a server of ours - that takes a Bismuth address as a param and produces a valid png image, with the matching BIS balance.
+
+**Example URL**
+http://localhost/index.php?address=437b30a2ea780cffb67cc220428d462cf2bedcbd3aab094aa7d4df9c
+Changing the BIS address within the URL automatically changes the badge data.
 
 Example with the address `437b30a2ea780cffb67cc220428d462cf2bedcbd3aab094aa7d4df9c`, one of my tip jar:
 
@@ -72,7 +79,7 @@ print(file_get_contents($cache_file));
 
 **Generate and save**
 
-Now, we miss a `generate_and_save` function that takes a `$address` and the location of the `$cache_file`.
+Now, we miss a `generate_and_save` function that takes an `$address` and the location of the `$cache_file`.
 
 Again, we'll split this task in several easy ones:
 - get the balance of the address
