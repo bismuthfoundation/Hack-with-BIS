@@ -44,6 +44,8 @@ The "token:" protocol allows for BIS tokens management: issuance and transfer.
 
 https://github.com/bismuthfoundation/Hack-with-BIS/blob/master/01-Concepts/protocols/token.md
 
+It's comparable to a lightweight ERC-20 implementation.
+
 
 # Bismuth team protocols
 
@@ -68,4 +70,12 @@ https://github.com/bismuthfoundation/Hack-with-BIS/blob/master/01-Concepts/proto
 ## Dragg
 
 The "dragg:" protocol is used by the https://dragginator.com dApp.
+
+It's kind of a specific ERC-721 implementation, but lighter, and more flexible.
+
+## Autogame
+
+The "autogame:" protocol is used by the Autogame on chain game.
+
+https://github.com/hclivess/autogame/blob/master/about.md
 
