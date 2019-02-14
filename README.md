@@ -25,7 +25,7 @@ https://github.com/bismuthfoundation/Hack-with-BIS/tree/master/07-Simple-Web-Aut
 
 Simple example with many variants.
 
-# 8a - Send a transactino from your Python code
+## 8a - Send a transaction from your Python code
 
 A straighforward use of the BismuthClient python package.  
 https://github.com/bismuthfoundation/Hack-with-BIS/tree/master/08a-Send-transaction-from-code
