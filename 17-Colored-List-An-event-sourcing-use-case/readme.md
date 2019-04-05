@@ -9,11 +9,11 @@ It's a specific use case of the "event sourcing" schema.
 ## The colored list
 
 This colored list is in fact a dictionary, with "colors" string as keys, and arbitrary data as values.  
-It is managed by the hypernode plugin, init at node start, then kept up to date from the new blocks events.
+It is managed by the hypernode plugin, init at hypernode start, then kept up to date from the new blocks events.
 
 ## The event sourcing model
 
-The dictionary is created and updated from indivudual specific transactions.  
+The dictionary is created and updated from individual specific transactions.  
 
 - operation: `color:key_name`
 - sender: POW controller address
@@ -26,6 +26,9 @@ Every tx matching both of these conditions drives an update of the corresponding
 - checks in plugin code are fast, and mean very little overhead even for hypernodes.
 
 - In addition of the final state of the dictionary, every change from the start can be traced and audited.
-- The pow controller addres is hard coded, and could be a single or several distinct addresses. 'color:' operations from other addresses are just ignored.
+- The pow controller address is hard coded, and could be a single or several distinct addresses. 'color:' operations from other addresses are just ignored.
 
 ## The code
+
+See https://github.com/bismuthfoundation/hypernode/blob/8c76fbf1e5415b6dcdafae7820e71e0412b49544/node_plugin/__init__.py#L129
+for the full_block hook that tests all new transactions and process the matching ones.
