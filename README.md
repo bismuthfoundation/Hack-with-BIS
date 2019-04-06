@@ -36,7 +36,7 @@ Specs for a PoC dApp demoing the use of offchain secure storage, for a Peer To P
 
 https://github.com/bismuthfoundation/Hack-with-BIS/tree/master/11-Offchain-secure-storage
 
-# Hypernode monitoring using asyncio
+# 18 - Hypernode monitoring using asyncio
 
 Parallel processing code based on asyncio for generating JSON files to monitor hypernodes.
 
