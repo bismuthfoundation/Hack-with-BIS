@@ -1,4 +1,4 @@
-#Bismuth State Channels
+# Bismuth State Channels
 
 The concept of Bismuth state channels comes from an idea that it is possible 
 to keep an objective consensus around behavior and results of on-chain contracts, without 
