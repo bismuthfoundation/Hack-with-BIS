@@ -14,6 +14,16 @@ In fact,
 they can act as anchors for opinion on any information, as long as more than 50% of
  participants remain truthful - such situation needs to be enforced by incentives for the
  historic performance in consensus. 
+ 
+ ## Usecase
+  
+ Users no longer need to run contracts to verify what the contracts are doing,
+ the verification is shrunk into a simple short hash, which supports all kinds of
+ contracts and all kinds of information (therefore named state channels). Particularly
+ useful for networks that enforce contract execution on all nodes, even if in a custom
+ implementation.
+
+## Implementation
 
 ```
 hash(Contract) → ContractHash
@@ -49,5 +59,11 @@ example_consensus ["node2"] = contract_list
 print (example_consensus)
 ```
  
+ Implementation would be best done as a Bismuth custom plugin, where nodes share contract hashes and
+ their opinion on contract behavior, optionally contract names to be less private. Incentivization
+ can be done with BIS or tokens.
+ 
  References:
+ 
  * https://github.com/ethereum/research/wiki/A-note-on-data-availability-and-erasure-coding
+ * https://github.com/bismuthfoundation/BismuthPlugins/tree/master/plugins/130_custom_commands
