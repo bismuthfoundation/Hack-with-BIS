@@ -17,12 +17,14 @@ they can act as anchors for opinion on any information, as long as more than 50%
  
  ## Usecase
   
- Users no longer need to run contracts to verify what the contracts are doing,
- the verification is shrunk into a simple short hash, which supports all kinds of
- contracts and all kinds of information (therefore named state channels). Particularly
+ Computational and storage requirements for contracts are reduced a checksum, instead
+ of need for additional contract execution for verification purposes, checking for 
+ consensus on a checksum result makes it possible to discern whether all nodes are
+ behaving properly. All contract and information types are supported (therefore named state channels). Particularly
  useful for networks that do not enforce contract execution on all nodes, but require
- status reporting on user-controlled contracts. This concept can be also used instead
- of oracles for connecting contracts to the real world, as a checksum mechanism. 
+ status reporting on exclusively off-chain contracts (current Bismuth contracts have chain
+  as a common layer). This concept can be also used instead of oracles for connecting 
+  contracts to the real world, as a checksum mechanism. 
 
 ## Implementation
 
