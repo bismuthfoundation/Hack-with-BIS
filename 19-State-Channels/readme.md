@@ -25,6 +25,9 @@ they can act as anchors for opinion on any information, as long as more than 50%
  status reporting on exclusively off-chain contracts (current Bismuth contracts have chain
   as a common layer). This concept can be also used instead of oracles for connecting 
   contracts to the real world, as a checksum mechanism. 
+  
+  Basically a chainless consensus mechanism that can be applied to any situation
+  where state/result coherence is important.
 
 ## Implementation
 
