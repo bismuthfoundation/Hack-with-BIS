@@ -1,4 +1,4 @@
-#Bismuth State Channels
+# Bismuth State Channels
 
 The concept of Bismuth state channels comes from an idea that it is possible 
 to keep an objective consensus around behavior and results of on-chain contracts, without 
@@ -20,8 +20,9 @@ they can act as anchors for opinion on any information, as long as more than 50%
  Users no longer need to run contracts to verify what the contracts are doing,
  the verification is shrunk into a simple short hash, which supports all kinds of
  contracts and all kinds of information (therefore named state channels). Particularly
- useful for networks that enforce contract execution on all nodes, even if in a custom
- implementation.
+ useful for networks that do not enforce contract execution on all nodes, but require
+ status reporting on user-controlled contracts. This concept can be also used instead
+ of oracles for connecting contracts to the real world, as a checksum mechanism. 
 
 ## Implementation
 
