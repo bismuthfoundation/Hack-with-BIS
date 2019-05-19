@@ -14,7 +14,7 @@ It embeds:
 - A low level connection layer to the Bismuth wallet server infrastructure (no obligation to run a local node)  
 - Python framework with many helpers and plugin support  
 - A Web server  
-- A them-able HTML wallet, running on top of the framework  
+- A themable HTML wallet, running on top of the framework  
 - A JSON API server for any wallet server supported command  
 - A JS framework  
 
@@ -111,7 +111,7 @@ We open the js file, and inject its content in footer via the "extra" bismuth va
  
  Variables are like `{{ var_name }}` and you can use python alike syntax for loops and conditions.
  
- See the full html template source code: (LINK)  
+ See the full html template source code: (https://github.com/bismuthfoundation/TornadoWallet/blob/master/wallet/crystals/212_docshield/themes/default/about.html)  
  The wallet is themeable, so what we're dealing with is only the content part of the GUI. Menu, sidebar, footer, are handled by the global theme.
  
  The core of our template is like 
