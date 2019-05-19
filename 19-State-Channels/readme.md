@@ -1,3 +1,5 @@
+> This is a research document, not a practical "Hack with Bis" Tutorial. Practical examples may come later on.
+
 # Bismuth State Channels
 
 The concept of Bismuth state channels comes from an idea that it is possible 
