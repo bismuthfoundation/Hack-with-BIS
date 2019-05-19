@@ -126,7 +126,7 @@ The base theme uses the bootstrap css framework, should not be new for any web d
 
 The content itself is 4 blocks:
 
-![docshield screenshot](https://hypernodes.bismuth.live/wp-content/uploads/2019/05/docshield2b.png)
+![docshield screenshot](https://github.com/bismuthfoundation/Hack-with-BIS/raw/master/20-DocShield-MakingOf/docshield2b2.png)
 
 - 1: Logo
 - 2: Document loading form and info
