@@ -34,7 +34,7 @@ reply = connections.receive (s) #receive data based on previous hash
 print(reply)
 ```
 
-## Usage
+## Editing and customization
 
 Copy the plugin to a directory of yours to edit, under bismuth/plugins.  
 Keep in mind the directory format 000_plugin_name and the numbering https://github.com/bismuthfoundation/BismuthPlugins/tree/master/doc#file-architecture
