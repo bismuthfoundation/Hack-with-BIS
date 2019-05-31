@@ -36,17 +36,7 @@ print(reply)
 
 ## Editing and customization
 
-Copy the plugin to a directory of yours to edit, under bismuth/plugins.  
-Keep in mind the directory format 000_plugin_name and the numbering https://github.com/bismuthfoundation/BismuthPlugins/tree/master/doc#file-architecture
-
-Regular plugins should use numbers from 200 to 899
-
-action_init, my_callback, filter_extra_commands_prefixes are generic functions you can keep as this.
-
-- edit `PREFIX = "SCTTR_"` to the functions prefix you want to define. Keep the ending _
-- define your CUSTOMPREFIX_function() instead of the demo SCTTR_ ones.
-- at least a socket_handler param is needed, so you can send the answer back - if needed -
-- use `MANAGER.execute_filter_hook('send_data_back', some_data, first_only=True)` to send your data back
+For more information about custom plugins, visit https://github.com/bismuthfoundation/BismuthPlugins/tree/master/plugins/130_custom_commands
 
 The demo SCTTR_ commands show various ways of providing params if needed:
 
