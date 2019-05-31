@@ -1,5 +1,9 @@
-Showcase how a custom plugin (130_custom_commands) can be used for decentralized offchain storage.
+# S.C.A.T.T.E.R
+## First usecase implementation of the Hyperlane architecture
+
+Showcase of how a custom plugin (130_custom_commands) can be used for decentralized offchain storage.
 To enable this plugin, simply move the "plugins" directory to your Bismuth directory and run your node.
+This plugin can be customized, for example to check if data storage has been paid for by the requestor.
 
 > This plugin requires 035_socket_client plugin to also be in the plugins directory.
 
@@ -54,3 +58,6 @@ This command takes data to store offchain as a parameter and returns hash of the
 
 This command takes hash of the stored data as a parameter and returns the data from the database
 
+# Limitations:
+
+This plugin is not well suited for storage of large data yet, at least not over the entire network
