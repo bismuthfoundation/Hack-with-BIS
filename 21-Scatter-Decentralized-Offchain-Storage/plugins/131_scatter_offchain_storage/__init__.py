@@ -16,12 +16,14 @@ __version__ = '0.0.1'
 
 
 MANAGER = None
+DB = None
 
 VERBOSE = True
 
 # Convention is to have a prefix ending in _ , so prefix and subsequent commands are easily readable.
 # Take care not to overload an existing command
 PREFIX = "SCTTR_"
+
 
 class DbHandler:
     def __init__(self):
@@ -38,7 +40,6 @@ class DbHandler:
         self.cursor.execute("SELECT * FROM data WHERE hash = ?", (hash,))
         returned = self.cursor.fetchall()[0]
         db_result = {"data": returned[0], "hash": returned[1]}
-
         return db_result
 
     # create database if it does not exist
@@ -49,51 +50,49 @@ class DbHandler:
                    'PRIMARY KEY(`hash`)'
                    ' )')
 
-db = DbHandler()
-db.create()
 
 def hash(data):
     hashed = blake2b(repr((data)).encode(), digest_size=20).hexdigest()
     return hashed
 
+
 def action_init(params):
-    """Generic plugin init"""
+    """Plugin init. Includes instanciation of the scatter storage DB space."""
     global MANAGER
+    global DB
     try:
         MANAGER = params['manager']
-        MANAGER.app_log.warning("Init SCATTER Plugin")
+        MANAGER.app_log.warning("Init SCATTER Plugin")        
+        DB = DbHandler()
+        DB.create()
     except:
         pass
 
 
 def SCTTR_store(socket_handler):
-    """This command takes one param from an extra packet and echoes it back"""
+    """Asks for an extra packet, data, and stores it. Then sends hash back."""
     MANAGER.app_log.warning("EXTRA command SCTTR_store")
     input = MANAGER.execute_filter_hook('receive_extra_packet', {'socket': socket_handler}, first_only=True)
     result = input['data']
-
-    db = DbHandler()
-    db.save(result)
-
+    DB.save(result)
     data = json.dumps({"data" : result,"hash" : hash(result)})
     MANAGER.execute_filter_hook('send_data_back', {'socket': socket_handler, 'data': data}, first_only=True)
 
+
 def SCTTR_get(socket_handler):
-    """This command takes one param from an extra packet and echoes it back"""
+    """This command takes one param from an extra packet (the hash) and sends back the stored data if any"""
     MANAGER.app_log.warning("EXTRA command SCTTR_get")
     input = MANAGER.execute_filter_hook('receive_extra_packet', {'socket': socket_handler}, first_only=True)
     result = input['data']
-
-    db = DbHandler()
-    data = json.dumps(db.get(result))
-
+    data = json.dumps(DB.get(result))
     MANAGER.execute_filter_hook('send_data_back', {'socket': socket_handler, 'data': data}, first_only=True)
 
 
 def my_callback(command_name, socket_handler):
     """The magic is here. This is the generic callback handler answering to the extra command"""
     # This method could stay as this.
-    MANAGER.app_log.warning("Got EXTRA command {}".format(command_name))
+    if VERBOSE:
+        MANAGER.app_log.warning("Got EXTRA command {}".format(command_name))
     if command_name in globals():
         # this allow to transparently map commands to this module functions with no more code
         globals()[command_name](socket_handler)
