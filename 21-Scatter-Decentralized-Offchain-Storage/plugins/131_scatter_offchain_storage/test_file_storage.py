@@ -1,3 +1,8 @@
+"""
+Demo of the 131_scatter_offchain_storage plugin.  
+Place this file in the Bismuth node directory.
+"""
+
 import json
 import socks
 from base64 import b85encode, b85decode
@@ -10,6 +15,8 @@ def decode(data, file):
         outfile.write(b85decode(data))
 
 def encode(file):
+    """Encodes binary file into base85 ascii so it can be sent over json 
+    (required by low level bismuth transport layer)"""
     with open(file, "rb") as infile:
         contents = b85encode(infile.read()).decode()
         print(contents)
