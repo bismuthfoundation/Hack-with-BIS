@@ -29,7 +29,7 @@ s.connect(("127.0.0.1", 5658))
 
 connections.send(s, "SCTTR_store")  # request data storage
 connections.send(s, encode("picture.png"))  # define data to store
-result = json.loads(connections.receive (s))  # receive hash of stored data
+result = json.loads(connections.receive(s))  # receive hash of stored data
 print("result", result)
 
 connections.send(s, "SCTTR_get")  # request stored data
