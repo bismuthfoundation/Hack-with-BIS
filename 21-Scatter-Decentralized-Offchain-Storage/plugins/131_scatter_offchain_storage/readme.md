@@ -9,7 +9,12 @@ This plugin can be customized, for example to check if data storage has been pai
 
 ## Demo
 
-The demo adds 2 commands SCTTR_store, SCTTR_get
+The demo adds 2 commands SCTTR_store, SCTTR_get. There are the following demo files: 
+- test_message_storage.py
+-- stores  and receives messages, by default "Hi!"
+
+- test_file_storage.py
+-- stores and receives files, by default "picture.png", which you need to supply yourself
 
 ## Test client
 
