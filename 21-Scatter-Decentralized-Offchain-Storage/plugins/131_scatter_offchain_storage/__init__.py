@@ -26,24 +26,26 @@ PREFIX = "SCTTR_"
 
 
 class DbHandler:
+    """Wrapper class for the stroage backend"""
+    
     def __init__(self):
         self.database = sqlite3.connect("scatter.db")
         self.cursor = self.database.cursor()
 
-    # save data, save hash
     def save(self, data):
+        """Save data, save hash"""
         self.cursor.execute("INSERT OR IGNORE INTO data VALUES (?,?)", (data,hash(data)))
         self.database.commit()
 
-    # get data based on hash
     def get(self, hash):
+        """"Get data based on hash"""
         self.cursor.execute("SELECT * FROM data WHERE hash = ?", (hash,))
         returned = self.cursor.fetchall()[0]
         db_result = {"data": returned[0], "hash": returned[1]}
         return db_result
 
-    # create database if it does not exist
     def create(self):
+        """Create database if it does not exist"""
         self.cursor.execute('CREATE TABLE IF NOT EXISTS `data` ( '
                    '`data` TEXT, '
                    '`hash` TEST UNIQUE,'
