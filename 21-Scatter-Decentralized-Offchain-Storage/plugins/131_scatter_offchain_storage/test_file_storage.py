@@ -1,16 +1,16 @@
 import json
 import socks
 import connections
-import base64
+from base64 import b85encode, b85decode
 
 def decode(data, file):
     print(data)
     with open(file, "wb") as outfile:
-        outfile.write(base64.b85decode(data))
+        outfile.write(b85decode(data))
 
 def encode(file):
     with open(file, 'rb') as infile:
-        contents = base64.b85encode(infile.read()).decode()
+        contents = b85encode(infile.read()).decode()
         print(contents)
 
     return contents
