@@ -1,8 +1,8 @@
 # S.C.A.T.T.E.R
 ## First usecase implementation of the Hyperlane architecture
 
-Showcase of how a custom plugin (130_custom_commands) can be used for decentralized offchain storage.
-To enable this plugin, simply move the "plugins" directory to your Bismuth directory and run your node.
+Showcase of how a custom plugin (131_scatter_offchain_storage) can be used for decentralized offchain storage.  
+To enable this plugin, simply move the "plugins" directory to your Bismuth directory and run your node.  
 This plugin can be customized, for example to check if data storage has been paid for by the requestor.
 
 > This plugin requires 035_socket_client plugin to also be in the plugins directory.
@@ -28,14 +28,14 @@ s = socks.socksocket()
 s.settimeout(10)
 s.connect(("127.0.0.1", 5658))
 
-connections.send (s, "SCTTR_store") #request data storage
-connections.send (s, "Hi!") #define data to store
-result = json.loads(connections.receive (s)) #receive hash of stored data
-print (result)
+connections.send(s, "SCTTR_store")  # request data storage
+connections.send(s, "Hi!")  # define data to store
+result = json.loads(connections.receive(s))  # receive hash of stored data
+print(result)
 
-connections.send (s, "SCTTR_get") #request stored data
-connections.send (s, result["hash"]) #share data hash
-reply = connections.receive (s) #receive data based on previous hash
+connections.send(s, "SCTTR_get")  # request stored data
+connections.send(s, result["hash"])  # share data hash
+reply = connections.receive(s)  # receive data based on previous hash
 print(reply)
 ```
 
@@ -47,12 +47,12 @@ The demo SCTTR_ commands show various ways of providing params if needed:
 
 ## SCTTR_store
 
-This command takes data to store offchain as a parameter and returns hash of the stored data
+This command takes data to store offchain as a parameter and returns hash of the stored data.
 
 ## SCTTR_get
 
-This command takes hash of the stored data as a parameter and returns the data from the database
+This command takes hash of the stored data as a parameter and returns the data from the database.
 
 # Limitations:
 
-This plugin is not well suited for storage of large data yet, at least not over the entire network
+This plugin is not well suited for storage of large data yet, at least not over the entire network.
