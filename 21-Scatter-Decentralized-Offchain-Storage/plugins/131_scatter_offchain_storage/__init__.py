@@ -9,7 +9,6 @@ Defines SCTTR_test1, SCTTR_echo and SCTTR_echo2
 """
 
 import json
-import socket
 import sqlite3
 from hashlib import blake2b
 
@@ -19,8 +18,6 @@ __version__ = '0.0.1'
 MANAGER = None
 
 VERBOSE = True
-
-
 
 # Convention is to have a prefix ending in _ , so prefix and subsequent commands are easily readable.
 # Take care not to overload an existing command
