@@ -15,8 +15,7 @@ from hashlib import blake2b
 __version__ = '0.0.1'
 
 
-MANAGER = None
-DB = None
+MANAGER = Non
 
 VERBOSE = True
 
@@ -61,12 +60,11 @@ def hash(data):
 def action_init(params):
     """Plugin init. Includes instanciation of the scatter storage DB space."""
     global MANAGER
-    global DB
     try:
         MANAGER = params['manager']
         MANAGER.app_log.warning("Init SCATTER Plugin")        
-        DB = DbHandler()
-        DB.create()
+        db = DbHandler()
+        db.create()
     except:
         pass
 
@@ -76,7 +74,8 @@ def SCTTR_store(socket_handler):
     MANAGER.app_log.warning("EXTRA command SCTTR_store")
     input = MANAGER.execute_filter_hook('receive_extra_packet', {'socket': socket_handler}, first_only=True)
     result = input['data']
-    DB.save(result)
+    db = DbHandler()
+    db.save(result)
     data = json.dumps({"data" : result,"hash" : hash(result)})
     MANAGER.execute_filter_hook('send_data_back', {'socket': socket_handler, 'data': data}, first_only=True)
 
@@ -86,13 +85,13 @@ def SCTTR_get(socket_handler):
     MANAGER.app_log.warning("EXTRA command SCTTR_get")
     input = MANAGER.execute_filter_hook('receive_extra_packet', {'socket': socket_handler}, first_only=True)
     result = input['data']
-    data = json.dumps(DB.get(result))
+    db = DbHandler()
+    data = json.dumps(db.get(result))
     MANAGER.execute_filter_hook('send_data_back', {'socket': socket_handler, 'data': data}, first_only=True)
 
 
 def my_callback(command_name, socket_handler):
     """The magic is here. This is the generic callback handler answering to the extra command"""
-    # This method could stay as this.
     if VERBOSE:
         MANAGER.app_log.warning("Got EXTRA command {}".format(command_name))
     if command_name in globals():
