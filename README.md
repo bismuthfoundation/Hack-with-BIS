@@ -30,7 +30,7 @@ Simple example with many variants.
 A straighforward use of the BismuthClient python package.  
 https://github.com/bismuthfoundation/Hack-with-BIS/tree/master/08a-Send-transaction-from-code
 
-## 11 - Offchain secure storage
+## 21 - Offchain secure storage
 
 Specs for a PoC dApp demoing the use of offchain secure storage, for a Peer To Peer content distribution network.
 
