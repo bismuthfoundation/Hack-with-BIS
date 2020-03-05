@@ -9,10 +9,10 @@ from base64 import b85encode, b85decode
 
 import connections
 
-def decode(data, file):
-    print(data)
+def decode(input, file):
+    data = json.loads(input)
     with open(file, "wb") as outfile:
-        outfile.write(b85decode(data))
+        outfile.write(b85decode(data['data']))
 
 def encode(file):
     """Encodes binary file into base85 ascii so it can be sent over json 
