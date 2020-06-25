@@ -4,9 +4,9 @@ header('Content-type: image/png');
 $address = $_GET['address'];
 
 function generate_and_save($address, $cache_file) {
-    $url = 'http://bismuth.online/api/address/'.$address;    
+    $url = 'https://bismuth.online/api/node/balanceget:'.$address;    
     $info = json_decode(file_get_contents($url), true);    
-    if (!isset($info['address'])) {
+    if (!isset($info['balance'])) {
         return;
     }
     $amount = round($info['balance']*100)/100;       

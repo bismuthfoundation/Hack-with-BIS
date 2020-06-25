@@ -89,26 +89,26 @@ Again, we'll split this task in several easy ones:
 
 ### Get the balance of an address
 
-The API doc tells us to query `http://bismuth.online/api/address/our_bismuth_address`.  
+The API doc tells us to query `https://bismuth.online/api/node/balanceget:our_bismuth_address`.  
 Let's fetch that in a browser to see what the result contains:
-http://bismuth.online/api/address/437b30a2ea780cffb67cc220428d462cf2bedcbd3aab094aa7d4df9c
+https://bismuth.online/api/node/balanceget:437b30a2ea780cffb67cc220428d462cf2bedcbd3aab094aa7d4df9c
 
 Result is 
 ```
-{"address": "437b30a2ea780cffb67cc220428d462cf2bedcbd3aab094aa7d4df9c", "alias": "", "credits": "0.12300000", "debits": "0.00000000", "rewards": "0.00000000", "fees": "0.00000000", "balance": "0.12300000"}
+{"balance": "0.11300000", "credit": "0.12300000", "debit": "0E-8", "fees": "0.01000000", "rewards": "0", "balance_no_mempool": "0.113"}
 ```
-A neat json, with our address back, as well as a "balance" key.
+A neat json, with our "balance" key.
 
 The required php to get the balance amount is an easy one:  
 ```php
-$url = 'http://bismuth.online/api/address/'.$address;    
+$url = 'https://bismuth.online/api/node/balanceget:'.$address;    
 $info = json_decode(file_get_contents($url), true);    
-if (!isset($info['address'])) {
+if (!isset($info['balance'])) {
     return;
 }
 $amount = round($info['balance']*100)/100;  
 ```
-We get the content, json_decode it, and check it contains an "address" key. If not, the server may be broken.  
+We get the content, json_decode it, and check if it contains a "balance" key. If not, the server may be broken.  
 Then, we round the amount to 2 digits after the decimal point, because our space is scarce.
 
 ### Get the text to print
@@ -166,9 +166,9 @@ header('Content-type: image/png');
 $address = $_GET['address'];
 
 function generate_and_save($address, $cache_file) {
-    $url = 'http://bismuth.online/api/address/'.$address;    
+    $url = 'https://bismuth.online/api/node/balanceget:'.$address;    
     $info = json_decode(file_get_contents($url), true);    
-    if (!isset($info['address'])) {
+    if (!isset($info['balance'])) {
         return;
     }
     $amount = round($info['balance']*100)/100;       
