@@ -51,7 +51,7 @@ Another compatible subprotocol could add a txid as reference to a token transfer
 Tokens are processed and indexed in a dedicated table within the core node code.  
 Users should use the native API commands or direct DB query in the tokens table to get tokens info, rather than re-implementing the protocol themselves.
 
-> Note: Some tokens were created with tokens v1 (no opration yet) and thus would not be valid if the whole chain was to be reindexed.  
+> Note: Some tokens were created with tokens v1 (no operation yet) and thus would not be valid if the whole chain was to be reindexed.  
 A Whole protocol re-implementation would need to handle both tokens v1 or v2 depending on the creation date.
 
 The tokens operations are - crudly - supported by the GUI wallet.
