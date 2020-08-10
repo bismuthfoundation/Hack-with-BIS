@@ -35,13 +35,16 @@ Bismuth core team.
 
 **Update, keeping compatibility with core node implementation**
 
-> To account for protocol extension, optional data can be given in Openfield after `TokenName:TokensQuantity`, like `TokenName:TokensQuantity:Anything_really`
+> To account for protocol extension, optional data can be given in Openfield after `TokenName:TokensQuantity`, like  
+> `TokenName:TokensQuantity:Anything_really`
 > Such data will be ignored by the core protocol.  
 > The recommended format for that optional data is a json dictionary, so to provide a typed and unambiguous payload.
 
-For instance, a common subprotocol could be to add a message to a token transfer, using as Openfield `TokenName:TokensQuantity:{"Message":"My custom message"}`  
+For instance, a common subprotocol could be to add a message to a token transfer, using as Openfield   
+`TokenName:TokensQuantity:{"Message":"My custom message"}`  
 
-Another compatible subprotocol could add a txid as reference to a token transfer, using as Openfield `TokenName:TokensQuantity:{"TxId":"some_previous_bismuth_tx_id"}`  
+Another compatible subprotocol could add a txid as reference to a token transfer, using as Openfield  
+`TokenName:TokensQuantity:{"TxId":"some_previous_bismuth_tx_id"}`  
 
 ## Usage
 
