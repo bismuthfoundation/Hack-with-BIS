@@ -30,6 +30,11 @@ WIP
 
 # Example Queries
 
-Here are a few useful example queries you can try
+Here are a few useful example queries you can try  
+Transactions last hour:  
+sqlite> `select count(*) from transactions where block_height in (SELECT block_height from transactions WHERE timestamp > strftime('%s', 'now', '-1 hour') and reward > 0) and reward <= 0;`  
+
+Transactions last 24 hours:  
+sqlite> `select count(*) from transactions where block_height in (SELECT block_height from transactions WHERE timestamp > strftime('%s', 'now', '-24 hour') and reward > 0) and reward <= 0;`  
 
 WIP
