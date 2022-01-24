@@ -31,10 +31,16 @@ WIP
 # Example Queries
 
 Here are a few useful example queries you can try  
-Transactions last hour:  
+Number of txs during the last hour:  
 sqlite> `select count(*) from transactions where block_height in (SELECT block_height from transactions WHERE timestamp > strftime('%s', 'now', '-1 hour') and reward > 0) and reward <= 0;`  
 
-Transactions last 24 hours:  
+Number of txs during the last 24 hours:  
 sqlite> `select count(*) from transactions where block_height in (SELECT block_height from transactions WHERE timestamp > strftime('%s', 'now', '-24 hour') and reward > 0) and reward <= 0;`  
+
+Number of txs during the last month (excluding coinbase txs):  
+sqlite> `SELECT count(*) FROM transactions WHERE  timestamp > strftime('%s', 'now', '-1 month') AND reward=0;`  
+
+Last 5 block rewards:  
+sqlite> `select block_height,reward from transactions order by block_height desc limit 5;`  
 
 WIP
