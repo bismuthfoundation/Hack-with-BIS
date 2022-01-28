@@ -30,7 +30,6 @@ You can easily access the .db in PHP for instance.
 | DATABASE |
 |----------|
 | ledger   |
-|----------|
 
 TABLE:	misc
 |  COLUMN       |  DATA TYPE   |
