@@ -37,7 +37,6 @@ TABLE:	misc
 |---------------|--------------|
 | block_height  | INTEGER      |
 | difficulty    | TEXT         |
-|---------------|--------------|
 
 TABLE:	transactions
 |  COLUMN       |  DATA TYPE   |
