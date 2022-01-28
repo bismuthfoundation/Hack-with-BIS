@@ -22,11 +22,42 @@ You can directly access that data anytime, even when the node is running, to ext
 ## Developers
 
 Every language has bindings for SQLite.  
-You can easily acccess the .db in PHP for instance.
+You can easily access the .db in PHP for instance.
 
 # DB Structure
+/static/ledger.db
 
-WIP
+|----------|
+| DATABASE |
+|----------|
+| ledger   |
+|----------|
+
+TABLE:	misc
+|---------------|--------------|
+|  COLUMN       |  DATA TYPE   |
+|---------------|--------------|
+| block_height  | INTEGER      |
+| difficulty    | TEXT         |
+|---------------|--------------|
+
+TABLE:	transactions
+|---------------|--------------|
+|  COLUMN       |  DATA TYPE   |
+|---------------|--------------|
+| block_height  | INTEGER      |
+| timestamp     | NUMERIC      |
+| address       | TEXT         |
+| recipient     | TEXT         |
+| amount        | NUMERIC      |
+| signature     | TEXT         |
+| public_key    | TEXT         |
+| block_hash    | TEXT         |
+| fee           | NUMERIC      |
+| reward        | NUMERIC      |
+| operation     | TEXT         |
+| openfield     | TEXT         |
+|---------------|--------------|
 
 # Example Queries
 
