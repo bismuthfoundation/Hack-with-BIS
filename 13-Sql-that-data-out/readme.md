@@ -27,14 +27,12 @@ You can easily access the .db in PHP for instance.
 # DB Structure
 /static/ledger.db
 
-|----------|
 | DATABASE |
 |----------|
 | ledger   |
 |----------|
 
 TABLE:	misc
-|---------------|--------------|
 |  COLUMN       |  DATA TYPE   |
 |---------------|--------------|
 | block_height  | INTEGER      |
@@ -42,7 +40,6 @@ TABLE:	misc
 |---------------|--------------|
 
 TABLE:	transactions
-|---------------|--------------|
 |  COLUMN       |  DATA TYPE   |
 |---------------|--------------|
 | block_height  | INTEGER      |
@@ -57,7 +54,7 @@ TABLE:	transactions
 | reward        | NUMERIC      |
 | operation     | TEXT         |
 | openfield     | TEXT         |
-|---------------|--------------|
+
 
 # Example Queries
 
