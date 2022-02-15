@@ -13,7 +13,7 @@ __WIP__
 Bismuth explorer comes with an integrated API.  
 You can use an official explorer or run your own. (Running your own is advised if you plan a high usage)
 
-- source code:https://github.com/maccaspacca/BismuthToolsWeb (legacy explorer)  
+- source code: https://github.com/maccaspacca/BismuthToolsWeb (legacy explorer)  
 - source code: https://github.com/maccaspacca/BismuthExplorer  
 - official explorer API: https://bismuth.online/apihelp  
 - explorer API: https://bismuth.im/apihelp (fallback)  
