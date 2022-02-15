@@ -8,13 +8,15 @@ __WIP__
 
 # Web or socket APIs, no need for a node
 
-## Explorers APIs
+## Blockchain Explorer APIs
 
 Bismuth explorer comes with an integrated API.  
 You can use an official explorer or run your own. (Running your own is advised if you plan a high usage)
 
-- code:https://github.com/maccaspacca/BismuthToolsWeb
-- official explorer API: http://bismuth.online/apihelp
+- source code:https://github.com/maccaspacca/BismuthToolsWeb (legacy explorer)  
+- source code: https://github.com/maccaspacca/BismuthExplorer  
+- official explorer API: https://bismuth.online/apihelp  
+- explorer API: https://bismuth.im/apihelp (fallback)  
 
 ## Official API
 
